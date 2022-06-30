@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>What do you want to do?</title>
+</head>
+<body>
+
+<a th:href="@{/invoices/create}" methods="get"> Create invoice</a><br>
+<a th:href="@{/invoices/list}" methods="get"> Show invoices</a><br>
+
+<a th:href="@{/users/login}"> Log out </a>
+
+</body>
+</html>

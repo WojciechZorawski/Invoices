@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create invoice</title>
+</head>
+<body>
+
+<form th:action="@{/invoices/create}" method="post" th:object="${createdInvoice}">
+  <p>Date <input type="date" field="*{date}" name="date"></p>
+  <p>Contractor <input type="text" field="*{contractor}" name="contractor"></p>
+  <p>Amount <input type="number" field="*{amount}" name="amount"></p>
+  <p>Description <input type="text" field="*{description}" name="description"></p>
+  <input type="submit" value="Create invoice">
+</form><br>
+
+<a th:href="@{/users/logged}"> Back </a>
+
+</body>
+</html>
